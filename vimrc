@@ -34,12 +34,17 @@ function! PackagerInit() abort
   call packager#add('SirVer/ultisnips')
 
   call packager#add('scrooloose/nerdcommenter')
-  call packager#add('python-mode/python-mode', {'type': 'opt'})
-  call packager#add('ycm-core/YouCompleteMe', {'type': 'opt', 'do': 'apt-get install python3-dev build-essential cmake && python3 install.py --clangd-completer'})
+  " call packager#add('python-mode/python-mode', {'type': 'opt'})
+  " call packager#add('ycm-core/YouCompleteMe', {'type': 'opt', 'do': 'apt-get install python3-dev build-essential cmake && python3 install.py --clangd-completer'})
   call packager#add('Raimondi/delimitMate')
   call packager#add('Yggdroot/indentLine')
 
   call packager#add('tpope/vim-fugitive')
+
+  call packager#add('prabirshrestha/vim-lsp')
+  call packager#add('mattn/vim-lsp-settings')
+  call packager#add('prabirshrestha/asyncomplete.vim')
+  call packager#add('prabirshrestha/asyncomplete-lsp.vim')
 
 endfunction
 
@@ -49,10 +54,6 @@ augroup packager_filetype
   autocmd FileType python packadd python-mode
 augroup END
 
-augroup load_ycm
-  autocmd!
-  autocmd CursorHold,CursorHoldI * :packadd YouCompleteMe | autocmd! load_ycm
-augroup END
 set updatetime=1000
 
 if exists('s:force_packager_install')

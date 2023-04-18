@@ -1,5 +1,4 @@
 
-autocmd FileType c,cpp,python nnoremap <buffer> <F12> :YcmCompleter GoTo<CR>
 autocmd FileType c,cpp,python nnoremap <buffer> <Leader>f :FSHere<CR>
 
 nnoremap <Leader><space> :nohlsearch<CR>

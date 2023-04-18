@@ -46,3 +46,7 @@ set ttyfast
 " ----------- cursor line -------------
 set cursorline
 set colorcolumn=80,100,200
+
+" ----------- other -------------------
+set backspace=2
+set hidden  " to switch buffers by bnext/bprevious
